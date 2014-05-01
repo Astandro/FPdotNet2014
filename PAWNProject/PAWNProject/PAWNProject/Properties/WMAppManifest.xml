@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{b6382301-dcf6-4898-9516-f09eabf96bd1}" Title="PAWNProject" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="PAWNProject author" Description="Sample description" Publisher="PAWNProject" PublisherID="{0bf15d02-b304-4845-812b-80a55d494660}">
+  <App xmlns="" ProductID="{4fcb7201-7bd0-4bed-9805-96358b903159}" Title="PAWNProject" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="PAWNProject author" Description="Sample description" Publisher="PAWNProject" PublisherID="{adca1f03-2b82-43c4-a7b9-73f0dc61562e}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
