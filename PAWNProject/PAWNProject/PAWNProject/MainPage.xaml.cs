@@ -22,6 +22,26 @@ namespace PAWNProject
             //BuildLocalizedApplicationBar();
         }
 
+        private void btnPsikotes_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PsychotestMainPage.xaml", UriKind.Relative));
+        }
+
+        private void btnTesKepribadian_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/TesKepribadianMainPage.xaml", UriKind.Relative));
+        }
+
+        private void btnTips_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/TipsMainPage.xaml", UriKind.Relative));
+        }
+
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative));
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{
