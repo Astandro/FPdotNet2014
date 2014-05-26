@@ -23,28 +23,21 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        
+
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Psychotest App" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
         </StackPanel>
 
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="10,207,0,0" TextWrapping="Wrap" Text="Please login using your account or register a new account" VerticalAlignment="Top" Height="76" Width="436" FontSize="24"/>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,427,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,290,0,0" TextWrapping="Wrap" Text="Username : " VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
-            	<Run Text="Password :"/>
-            	<LineBreak/>
-            	<Run/>
-            </TextBlock>
-            <Button x:Name="LoginBtn" Content="Login" HorizontalAlignment="Left" Margin="0,504,0,0" VerticalAlignment="Top" Width="165" Click="Button_Click"/>
-            <Button x:Name="RegisBtn" Content="Register" HorizontalAlignment="Left" Margin="281,504,0,0" VerticalAlignment="Top" Width="165" Click="RegisBtn_Click"/>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,10,10,-10">
+            <Button x:Name="PsikotesBtn" Content="Psikotes" Margin="92,161,98,0" VerticalAlignment="Top" Click="PsikotesBtn_Click" Height="97"/>
+            <Button x:Name="KepribadianBtn" Content="Tes Kepribadian" Margin="92,263,98,0" VerticalAlignment="Top" Click="KepribadianBtn_Click" Height="97"/>
+            <StackPanel HorizontalAlignment="Left" Height="530" Margin="10,156,0,0" VerticalAlignment="Top" Width="436"/>
+            <Button x:Name="TipsBtn" Content="Tips" Margin="92,365,98,0" VerticalAlignment="Top" Click="TipsBtn_Click" Height="97"/>
+            <Button x:Name="AboutBtn" Content="About" Margin="92,462,98,0" VerticalAlignment="Top" Click="RegisBtn_Click" Height="97"/>
         </Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="83,120,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to PAWN" VerticalAlignment="Top" Height="53" Width="326" FontSize="36"/>
-        <HyperlinkButton Content="About" HorizontalAlignment="Left" Margin="367,17,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="65,113,0,0" Grid.Row="1" TextWrapping="Wrap" Text="- Pscyhotest App for Winfows Phone -" VerticalAlignment="Top" Height="53" Width="350" FontSize="20"/>
 
-       
+
     </Grid>
 
 </phone:PhoneApplicationPage>

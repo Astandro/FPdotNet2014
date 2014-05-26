@@ -19,24 +19,39 @@ namespace PAWNProject
         public MainPage()
         {
             InitializeComponent();
-        
          
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void PsikotesBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/PawnMainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/PsikotesMainPage.xaml", UriKind.Relative));
+        }
+
+        private void KepribadianBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/TesKepribadianMainPage.xaml", UriKind.Relative));
+
+        }
+
+        private void TipsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/TipsMainPage.xaml", UriKind.Relative));
         }
 
         private void RegisBtn_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
-        {
             NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative));
         }
+
+      
+      
+
+     
+
+   
+
+        
        
 
     }
