@@ -42,14 +42,23 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Psychotest App" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="PAWN Project" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
+            <TextBlock HorizontalAlignment="Left" Margin="10,207,0,0" TextWrapping="Wrap" Text="Please login using your account or register a new account" VerticalAlignment="Top" Height="76" Width="436" FontSize="24"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,427,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,290,0,0" TextWrapping="Wrap" Text="Username : " VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+            	<Run Text="Password :"/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+            <Button x:Name="LoginBtn" Content="Login" HorizontalAlignment="Left" Margin="0,504,0,0" VerticalAlignment="Top" Width="165" Click="Button_Click"/>
+            <Button x:Name="RegisBtn" Content="Register" HorizontalAlignment="Left" Margin="281,504,0,0" VerticalAlignment="Top" Width="165" Click="RegisBtn_Click"/>
         </Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="27,24,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to PAWN" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="83,120,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to PAWN" VerticalAlignment="Top" Height="53" Width="326" FontSize="36"/>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to

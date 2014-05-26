@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PAWNProject.Resources;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace PAWNProject
 {
@@ -17,9 +19,21 @@ namespace PAWNProject
         public MainPage()
         {
             InitializeComponent();
-
+            ImageBrush bg = new ImageBrush();
+            bg.ImageSource=new BitmapImage (new Uri("/Assets/loginBG.png",UriKind.Relative));
+            LayoutRoot.Background=bg;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PawnMainPage.xaml", UriKind.Relative));
+        }
+
+        private void RegisBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         // Sample code for building a localized ApplicationBar
@@ -32,7 +46,7 @@ namespace PAWNProject
         //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
         //    appBarButton.Text = AppResources.AppBarButtonText;
         //    ApplicationBar.Buttons.Add(appBarButton);
-
+        
         //    // Create a new menu item with the localized string from AppResources.
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
