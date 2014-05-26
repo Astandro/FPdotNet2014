@@ -10,16 +10,21 @@ using Microsoft.Phone.Shell;
 
 namespace PAWNProject
 {
-    public partial class TipsMainPage : PhoneApplicationPage
+    public partial class TestPage : PhoneApplicationPage
     {
-        public TipsMainPage()
+        public TestPage()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if (radioTrue.IsChecked == true)
+                MessageBox.Show("Anda benar");
+            else if (radioFalse.IsChecked == true)
+                MessageBox.Show("Anda salah");
+            else
+                MessageBox.Show("pilih pilhan yang anda anggap benar");
         }
     }
 }

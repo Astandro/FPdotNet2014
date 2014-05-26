@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PAWNProject.PawnMainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/BG2.png"></ImageBrush>
+        </Grid.Background>
+        <phone:Pivot HorizontalAlignment="Left" Height="780" Margin="10,10,0,0" Title="Menu Psikotes" VerticalAlignment="Top" Width="460" Loaded="Pivot_Loaded">
+            <phone:PivotItem CacheMode="{x:Null}" Header="Logika Formil">
+                <Grid Height="560" Margin="0,0,-296,0">
+                    <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" Text="Tes logika formil adalah suatu bentuk  tes yang menguji penalaran dalam mengambil kesimpulan yang benar secara logis dari pernyataan-pernyataan yang diberikan" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center"/>
+                    <Button x:Name="LogikaFormilBtn" Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="LogikaFormilBtn_Click"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem CacheMode="{x:Null}" Header="Logika Angka" Height="0" VerticalAlignment="Top">
+                    <Grid Margin="0,0,-152,-580">
+                        <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center">
+                        	<Run Text="Tes logika angka adalah suatu bentuk tes logika yang melibatkan perhitungan matematika dasar dan juga pengambilan kesimpulan yang valid dari pernyataan matematika yang diberikan"/>
+                        </TextBlock>
+                        <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90"/>
+                    </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem CacheMode="{x:Null}" Header="Padanan Kata" FontSize="22">
+                <Grid Margin="0,0,-152,-580">
+                    <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center" Text="Tes ini akan mengetes kemampuan dalam mencari suatu kata yang memiliki arti yang sama dengan kata yang diberikan"/>
+                    <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem CacheMode="{x:Null}" Header="item2">
+                <Grid/>
+            </phone:PivotItem>
+        </phone:Pivot>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -14,29 +14,30 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/BG1.png"></ImageBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        
-        <!--TitlePanel contains the name of the application and page title-->
+
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Psychotest App" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="PAWN APP" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Height="123" FontWeight="Bold" FontSize="86"/>
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button x:Name="btnPsikotes" Content="Psikotes" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Height="115" Width="228" ClickMode="Press" Click="btnPsikotes_Click"/>
-            <Button x:Name="btnTesKepribadian" Content="Tes Kepribadian" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,130,0,0" Height="115" Width="228" Click="btnTesKepribadian_Click"/>
-            <Button x:Name="btnTips" Content="Tips" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,250,0,0" Height="115" Width="228" Click="btnTips_Click"/>
-            <Button x:Name="btnAbout" Content="About" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,370,0,0" Height="115" Width="228" Click="btnAbout_Click"/>
-
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,10,10,-10">
+            <Button x:Name="PsikotesBtn" Content="Psikotes" Margin="92,161,98,0" VerticalAlignment="Top" Click="PsikotesBtn_Click" Height="97"/>
+            <Button x:Name="KepribadianBtn" Content="Tes Kepribadian" Margin="92,263,98,0" VerticalAlignment="Top" Click="KepribadianBtn_Click" Height="97"/>
+            <StackPanel HorizontalAlignment="Left" Height="530" Margin="10,156,0,0" VerticalAlignment="Top" Width="436"/>
+            <Button x:Name="TipsBtn" Content="Tips" Margin="92,365,98,0" VerticalAlignment="Top" Click="TipsBtn_Click" Height="97"/>
+            <Button x:Name="AboutBtn" Content="About" Margin="92,462,98,0" VerticalAlignment="Top" Click="RegisBtn_Click" Height="97"/>
         </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="65,113,0,0" Grid.Row="1" TextWrapping="Wrap" Text="- Pscyhotest App for Windows Phone -" VerticalAlignment="Top" Height="53" Width="350" FontSize="20"/>
 
-        
+
     </Grid>
 
 </phone:PhoneApplicationPage>

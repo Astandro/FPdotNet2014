@@ -13,8 +13,10 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/loginBG.png"></ImageBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,15 +24,24 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="PAWN APP" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="About PAWN" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Psychotest App" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="PAWN (Psychotest App for Windows Phone) merupakan aplikasi latihan psikotes yang terdiri dari 2 macam tes antara lain psikotes dan tes kepribadian. Aplikasi ini juga menyediakan tips-tips yang dapat digunakan user untuk persiapan menghadapi psikotes yang sebenarnya. PAWN dapat digunakan oleh siapa saja, kapan saja, di mana saja secara gratis dan tidak membutuhkan koneksi internet. soal-soal yang digunakan dalam aplikasi ini merujuk pada soal-soal psikotes yang sering digunakan pada psikotes maupun tes kepribadian di Indonesia." VerticalAlignment="Top" Margin="10,10,0,0" Height="371" Width="436" TextAlignment="Left" LineHeight="18" FontSize="20"/>
-            <Button x:Name="btnBack" Content="Kembali" HorizontalAlignment="Left" Margin="297,404,0,0" VerticalAlignment="Top" Click="btnBack_Click"/>
-
+            <TextBlock Margin="10,95,-13,505" Style="{StaticResource PhoneTextTitle1Style}">
+            	<Run Text="About"/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="22,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="424">
+            	<Run Text="PAWN (Psychotest App for Windows Phone)"/>
+            	<LineBreak/>
+            	<Run Text="adalah sebuah aplikasi psikotes yang berbasis pada windows phone 8 "/>
+            	<LineBreak/>
+            	<Run Text="dst. dst. belum ditambahin"/>
+            </TextBlock>
+            <HyperlinkButton Content="Back to Home" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click"/>
 
         </Grid>
     </Grid>

@@ -14,7 +14,12 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/BG3.png">
+
+            </ImageBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,12 +27,16 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="PAWN APP" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Tips" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Tips mengahadapi psikotes" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Tips" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="72"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Text="Sebelum menghadapi psikotes usahakan keadaan pikiran tenang dan rileks, badan dalam keadaan sehat dan telah makan "  HorizontalAlignment="Left" Margin="24,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="445" Width="403"/>
+            <Button Content="Setelah" HorizontalAlignment="Left" Margin="320,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.226,0.275" />
+            <Button Content="Sebelum" HorizontalAlignment="Left" Margin="0,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.226,0.275"/>
+            <TextBlock Text="Tips 1/5" Margin="192,520,183,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="24"/>
 
         </Grid>
     </Grid>

@@ -17,9 +17,9 @@ namespace PAWNProject
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new Uri("/MainPage.xaml",UriKind.Relative));
         }
     }
 }

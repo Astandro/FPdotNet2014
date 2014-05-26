@@ -10,9 +10,9 @@ using Microsoft.Phone.Shell;
 
 namespace PAWNProject
 {
-    public partial class TesKepribadianMainPage : PhoneApplicationPage
+    public partial class TesKepribadianMain : PhoneApplicationPage
     {
-        public TesKepribadianMainPage()
+        public TesKepribadianMain()
         {
             InitializeComponent();
         }
