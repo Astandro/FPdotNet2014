@@ -36,6 +36,8 @@ namespace PAWNProject
 
         }
 
+       
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{
