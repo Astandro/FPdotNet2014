@@ -16,7 +16,7 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/loginBG.png"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/BG1.png"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -35,7 +35,7 @@
             <Button x:Name="TipsBtn" Content="Tips" Margin="92,365,98,0" VerticalAlignment="Top" Click="TipsBtn_Click" Height="97"/>
             <Button x:Name="AboutBtn" Content="About" Margin="92,462,98,0" VerticalAlignment="Top" Click="RegisBtn_Click" Height="97"/>
         </Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="65,113,0,0" Grid.Row="1" TextWrapping="Wrap" Text="- Pscyhotest App for Winfows Phone -" VerticalAlignment="Top" Height="53" Width="350" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="65,113,0,0" Grid.Row="1" TextWrapping="Wrap" Text="- Pscyhotest App for Windows Phone -" VerticalAlignment="Top" Height="53" Width="350" FontSize="20"/>
 
 
     </Grid>

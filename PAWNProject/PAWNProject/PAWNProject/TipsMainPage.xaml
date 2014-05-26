@@ -16,7 +16,7 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" >
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/mainPanoramaBG.png">
+            <ImageBrush ImageSource="/Assets/BG3.png">
 
             </ImageBrush>
         </Grid.Background>

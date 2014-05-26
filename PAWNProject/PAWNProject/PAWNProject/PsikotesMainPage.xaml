@@ -16,7 +16,7 @@
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/testBg.png"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/BG2.png"></ImageBrush>
         </Grid.Background>
         <phone:Pivot HorizontalAlignment="Left" Height="780" Margin="10,10,0,0" Title="Menu Psikotes" VerticalAlignment="Top" Width="460" Loaded="Pivot_Loaded">
             <phone:PivotItem CacheMode="{x:Null}" Header="Logika Formil">
