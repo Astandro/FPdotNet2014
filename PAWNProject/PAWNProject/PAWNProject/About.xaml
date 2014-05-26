@@ -28,6 +28,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="PAWN (Psychotest App for Windows Phone) merupakan aplikasi latihan psikotes yang terdiri dari 2 macam tes antara lain psikotes dan tes kepribadian. Aplikasi ini juga menyediakan tips-tips yang dapat digunakan user untuk persiapan menghadapi psikotes yang sebenarnya. PAWN dapat digunakan oleh siapa saja, kapan saja, di mana saja secara gratis dan tidak membutuhkan koneksi internet. soal-soal yang digunakan dalam aplikasi ini merujuk pada soal-soal psikotes yang sering digunakan pada psikotes maupun tes kepribadian di Indonesia." VerticalAlignment="Top" Margin="10,10,0,0" Height="371" Width="436" TextAlignment="Left" LineHeight="18" FontSize="20"/>
+            <Button x:Name="btnBack" Content="Kembali" HorizontalAlignment="Left" Margin="297,404,0,0" VerticalAlignment="Top" Click="btnBack_Click"/>
+
 
         </Grid>
     </Grid>

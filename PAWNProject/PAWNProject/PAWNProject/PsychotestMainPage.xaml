@@ -23,11 +23,14 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="PAWN APP" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Psikotes" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Psikotes Main Page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="52"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ketentuan Psikotes" VerticalAlignment="Top" Margin="30,25,0,0" FontSize="24"/>
+            <phone:LongListSelector x:Name="viewerListKetentuan" HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="388" Margin="30,81,0,0" FontSize="20"/>
+            <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="265,508,0,0" Width="153" Click="btnNext_Click"/>
 
         </Grid>
     </Grid>
