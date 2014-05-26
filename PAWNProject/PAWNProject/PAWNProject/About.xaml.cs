@@ -10,21 +10,16 @@ using Microsoft.Phone.Shell;
 
 namespace PAWNProject
 {
-    public partial class PawnMainPage : PhoneApplicationPage
+    public partial class About : PhoneApplicationPage
     {
-        public PawnMainPage()
+        public About()
         {
             InitializeComponent();
         }
 
-        private void Panorama_Loaded(object sender, RoutedEventArgs e)
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/TestPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml",UriKind.Relative));
         }
     }
 }

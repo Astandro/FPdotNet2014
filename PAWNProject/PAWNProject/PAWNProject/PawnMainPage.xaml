@@ -42,7 +42,7 @@
             <!--Panorama item two-->
             <phone:PanoramaItem Header="Logic Test">
                 <StackPanel HorizontalAlignment="Left" Height="483" VerticalAlignment="Top" Width="420">
-                    <TextBlock TextWrapping="Wrap" Text="Formal Logic Test I" Height="71" FontSize="36"/>
+                    <TextBlock TextWrapping="Wrap" Text="Formal Logic Test I" Height="71" FontSize="36" Tap="TextBlock_Tap"/>
                     <TextBlock TextWrapping="Wrap" Text="Formal Logic Test II" Height="71" FontSize="36"/>
                     <TextBlock TextWrapping="Wrap" Text="Spatial Logic Test" Height="71" FontSize="36"/>
                 </StackPanel>
