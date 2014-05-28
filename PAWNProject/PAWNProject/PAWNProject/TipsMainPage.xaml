@@ -34,9 +34,9 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock x:Name="textBlockTips" Text="Sebelum menghadapi psikotes usahakan keadaan pikiran tenang dan rileks, badan dalam keadaan sehat dan telah makan "  HorizontalAlignment="Left" Margin="24,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="445" Width="403"/>
-            <Button x:Name="btnTipsNext" Content="Lanjut" HorizontalAlignment="Left" Margin="299,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.226,0.275" Width="135" Click="btnTipsNext_Click" />
+            <Button x:Name="btnTipsNext" Content="Lanjut" HorizontalAlignment="Left" Margin="321,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.226,0.275" Width="135" Click="btnTipsNext_Click" />
             <Button x:Name="btnTipsBefore" Content="Kembali" HorizontalAlignment="Left" Margin="0,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.226,0.275" Width="135" Click="btnTipsBefore_Click"/>
-            <TextBlock x:Name="tipsCounter" Text="Tips 1/5" Margin="176,517,199,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="24"/>
+            <TextBlock x:Name="tipsCounter" Text="Tips 1/5" Margin="176,517,177,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="24" TextAlignment="Center"/>
 
         </Grid>
     </Grid>

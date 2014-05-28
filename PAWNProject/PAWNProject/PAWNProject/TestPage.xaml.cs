@@ -11,20 +11,39 @@ using Microsoft.Phone.Shell;
 namespace PAWNProject
 {
     public partial class TestPage : PhoneApplicationPage
-    {
+    {         
+        List<SoalPsikotes> soal = new List<SoalPsikotes>();
         public TestPage()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (radioTrue.IsChecked == true)
-                MessageBox.Show("Anda benar");
-            else if (radioFalse.IsChecked == true)
-                MessageBox.Show("Anda salah");
-            else
-                MessageBox.Show("pilih pilhan yang anda anggap benar");
+            SoalContext sContext = new SoalContext(SoalContext.ConnectionString);
+            sContext.CreateIfNotExists();
+            sContext.LogDebug = true;
+            try
+            {
+                soal = sContext.SoalPsikotes.ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            texBlockSoal.Text = soal.ElementAt(0).IsiSoal;
+            btnA.Content = soal.ElementAt(0).JawabanA;
+            btnB.Content = soal.ElementAt(0).JawabanB;
+            btnC.Content = soal.ElementAt(0).JawabanC;
         }
+
+        private void btnLanjut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }

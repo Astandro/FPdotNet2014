@@ -26,27 +26,16 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Psikotes" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Logika Formal" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Matematik" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="24,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="173" Width="399" FontSize="24">
-        		<Run Text="Premis 1 : semua harimau mengaum"/>
-        		<LineBreak/>
-        		<Run Text="Premis 2 : gary adalah harimau"/>
-        		<LineBreak/>
-        		<Run/>
-        		<LineBreak/>
-        		<Run Text="Kesimpulan:"/>
-        		<LineBreak/>
-        		<Run Text="Gary mengaum"/>
-        		<LineBreak/>
-        		<Run/>
-            </TextBlock>
-            <RadioButton x:Name="radioTrue" Content="Betul" HorizontalAlignment="Left" Margin="24,206,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="radioFalse" Content="Salah" HorizontalAlignment="Left" Margin="304,201,0,0" VerticalAlignment="Top"/>
-            <Button Content="next" HorizontalAlignment="Left" Margin="304,317,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click"/>
+            <TextBlock x:Name="texBlockSoal" HorizontalAlignment="Left" Margin="24,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="295" Width="406" FontSize="24" Text="Soal Psikotes"/>
+            <RadioButton x:Name="btnA" Content="Jawaban A" HorizontalAlignment="Left" Margin="24,328,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <RadioButton x:Name="btnB" Content="Jawaban B" HorizontalAlignment="Left" Margin="24,405,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <Button x:Name="btnLanjut" Content="Lanjut" HorizontalAlignment="Left" Margin="304,482,0,0" VerticalAlignment="Top" Width="142" Click="btnLanjut_Click"/>
+            <RadioButton x:Name="btnC" Content="Jawaban C" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,482,0,0" FontSize="20"/>
         </Grid>
     </Grid>
 
