@@ -21,6 +21,7 @@ namespace PAWNProject
 	using System.ComponentModel;
 	using System;
 	
+	
 using System.IO;
 using System.IO.IsolatedStorage;
 using Microsoft.Phone.Data.Linq.Mapping;
@@ -87,7 +88,7 @@ public class DebugWriter : TextWriter
 }
 
 
-	public partial class SoalContext : System.Data.Linq.DataContext
+	public partial class DBSoalContext : System.Data.Linq.DataContext
 	{
 		
 		public bool CreateIfNotExists()
@@ -154,13 +155,13 @@ public class DebugWriter : TextWriter
 			}
 		}
 		
-		public static string ConnectionString = "Data Source=isostore:/Soal.sdf";
+		public static string ConnectionString = "Data Source=isostore:/DBSoal.sdf";
 
-		public static string ConnectionStringReadOnly = "Data Source=appdata:/Soal.sdf;File Mode=Read Only;";
+		public static string ConnectionStringReadOnly = "Data Source=appdata:/DBSoal.sdf;File Mode=Read Only;";
 
-		public static string FileName = "Soal.sdf";
+		public static string FileName = "DBSoal.sdf";
 
-		public SoalContext(string connectionString) : base(connectionString)
+		public DBSoalContext(string connectionString) : base(connectionString)
 		{
 			OnCreated();
 		}
@@ -187,11 +188,11 @@ public class DebugWriter : TextWriter
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id;
+		private string _Kode_Soal;
 		
-		private string _KodeSoal;
+		private string _Jenis_Soal;
 		
-		private string _IsiSoal;
+		private string _Isi_Soal;
 		
 		private string _JawabanA;
 		
@@ -199,30 +200,30 @@ public class DebugWriter : TextWriter
 		
 		private string _JawabanC;
 		
-		private string _JawabanBenar;
+		private string _JawabanD;
 		
-		private string _JenisSoal;
+		private string _JawabanBenar;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnKodeSoalChanging(string value);
-    partial void OnKodeSoalChanged();
-    partial void OnIsiSoalChanging(string value);
-    partial void OnIsiSoalChanged();
+    partial void OnKode_SoalChanging(string value);
+    partial void OnKode_SoalChanged();
+    partial void OnJenis_SoalChanging(string value);
+    partial void OnJenis_SoalChanged();
+    partial void OnIsi_SoalChanging(string value);
+    partial void OnIsi_SoalChanged();
     partial void OnJawabanAChanging(string value);
     partial void OnJawabanAChanged();
     partial void OnJawabanBChanging(string value);
     partial void OnJawabanBChanged();
     partial void OnJawabanCChanging(string value);
     partial void OnJawabanCChanged();
+    partial void OnJawabanDChanging(string value);
+    partial void OnJawabanDChanged();
     partial void OnJawabanBenarChanging(string value);
     partial void OnJawabanBenarChanged();
-    partial void OnJenisSoalChanging(string value);
-    partial void OnJenisSoalChanged();
     #endregion
 		
 		public SoalPsikotes()
@@ -230,67 +231,67 @@ public class DebugWriter : TextWriter
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kode_Soal", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Kode_Soal
 		{
 			get
 			{
-				return this._Id;
+				return this._Kode_Soal;
 			}
 			set
 			{
-				if ((this._Id != value))
+				if ((this._Kode_Soal != value))
 				{
-					this.OnIdChanging(value);
+					this.OnKode_SoalChanging(value);
 					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._Kode_Soal = value;
+					this.SendPropertyChanged("Kode_Soal");
+					this.OnKode_SoalChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KodeSoal", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string KodeSoal
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Jenis_Soal", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Jenis_Soal
 		{
 			get
 			{
-				return this._KodeSoal;
+				return this._Jenis_Soal;
 			}
 			set
 			{
-				if ((this._KodeSoal != value))
+				if ((this._Jenis_Soal != value))
 				{
-					this.OnKodeSoalChanging(value);
+					this.OnJenis_SoalChanging(value);
 					this.SendPropertyChanging();
-					this._KodeSoal = value;
-					this.SendPropertyChanged("KodeSoal");
-					this.OnKodeSoalChanged();
+					this._Jenis_Soal = value;
+					this.SendPropertyChanged("Jenis_Soal");
+					this.OnJenis_SoalChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsiSoal", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
-		public string IsiSoal
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Isi_Soal", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
+		public string Isi_Soal
 		{
 			get
 			{
-				return this._IsiSoal;
+				return this._Isi_Soal;
 			}
 			set
 			{
-				if ((this._IsiSoal != value))
+				if ((this._Isi_Soal != value))
 				{
-					this.OnIsiSoalChanging(value);
+					this.OnIsi_SoalChanging(value);
 					this.SendPropertyChanging();
-					this._IsiSoal = value;
-					this.SendPropertyChanged("IsiSoal");
-					this.OnIsiSoalChanged();
+					this._Isi_Soal = value;
+					this.SendPropertyChanged("Isi_Soal");
+					this.OnIsi_SoalChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanA", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanA", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string JawabanA
 		{
 			get
@@ -310,7 +311,7 @@ public class DebugWriter : TextWriter
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanB", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanB", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string JawabanB
 		{
 			get
@@ -330,7 +331,7 @@ public class DebugWriter : TextWriter
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanC", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanC", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string JawabanC
 		{
 			get
@@ -350,7 +351,27 @@ public class DebugWriter : TextWriter
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanBenar", DbType="NVarChar(5) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanD", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string JawabanD
+		{
+			get
+			{
+				return this._JawabanD;
+			}
+			set
+			{
+				if ((this._JawabanD != value))
+				{
+					this.OnJawabanDChanging(value);
+					this.SendPropertyChanging();
+					this._JawabanD = value;
+					this.SendPropertyChanged("JawabanD");
+					this.OnJawabanDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JawabanBenar", DbType="NChar(10) NOT NULL", CanBeNull=false)]
 		public string JawabanBenar
 		{
 			get
@@ -366,26 +387,6 @@ public class DebugWriter : TextWriter
 					this._JawabanBenar = value;
 					this.SendPropertyChanged("JawabanBenar");
 					this.OnJawabanBenarChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JenisSoal", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string JenisSoal
-		{
-			get
-			{
-				return this._JenisSoal;
-			}
-			set
-			{
-				if ((this._JenisSoal != value))
-				{
-					this.OnJenisSoalChanging(value);
-					this.SendPropertyChanging();
-					this._JenisSoal = value;
-					this.SendPropertyChanged("JenisSoal");
-					this.OnJenisSoalChanged();
 				}
 			}
 		}

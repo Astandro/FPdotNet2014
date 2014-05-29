@@ -30,13 +30,12 @@ namespace PAWNProject
 
         private void LogikaFormilBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/TestPage.xaml", UriKind.Relative));
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/TestPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/TesLogikaAngkaPage.xaml", UriKind.Relative));
         }
 
       
