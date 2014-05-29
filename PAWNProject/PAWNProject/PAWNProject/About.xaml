@@ -15,7 +15,7 @@
 
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/BG1.png"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/loginBG.png"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

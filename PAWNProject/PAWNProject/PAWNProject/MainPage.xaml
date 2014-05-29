@@ -29,7 +29,7 @@
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,10,10,-10">
-            <Button x:Name="PsikotesBtn"  Margin="92,184,98,0" VerticalAlignment="Top" Click="PsikotesBtn_Click"  Content="Psikotes"  Height="74"/>
+            <Button x:Name="PsikotesBtn" Content="Psikotes" Margin="92,161,98,0" VerticalAlignment="Top" Click="PsikotesBtn_Click" Height="97"/>
             <Button x:Name="KepribadianBtn" Content="Tes Kepribadian" Margin="92,263,98,0" VerticalAlignment="Top" Click="KepribadianBtn_Click" Height="97"/>
             <StackPanel HorizontalAlignment="Left" Height="530" Margin="10,156,0,0" VerticalAlignment="Top" Width="436"/>
             <Button x:Name="TipsBtn" Content="Tips" Margin="92,365,98,0" VerticalAlignment="Top" Click="TipsBtn_Click" Height="97"/>
