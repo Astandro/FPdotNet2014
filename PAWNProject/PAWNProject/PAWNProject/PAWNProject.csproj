@@ -101,6 +101,12 @@
       <DependentUpon>DetailHasil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Jawaban.cs" />
+    <Compile Include="TesLogikaFormilPage.xaml.cs">
+      <DependentUpon>TesLogikaFormilPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TesPadananKataPage.xaml.cs">
+      <DependentUpon>TesPadananKataPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="testResult.xaml.cs">
       <DependentUpon>testResult.xaml</DependentUpon>
     </Compile>
@@ -140,6 +146,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetailHasil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesLogikaFormilPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesPadananKataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
