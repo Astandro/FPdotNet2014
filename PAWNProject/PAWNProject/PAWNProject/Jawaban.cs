@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PAWNProject
 {
-    class ImgQuestion : Question
+    public class Jawaban
     {
-        private Uri imageLink { get; set; }
-
+        public String kodeSoal;
+        public String jawaban;
     }
 }
