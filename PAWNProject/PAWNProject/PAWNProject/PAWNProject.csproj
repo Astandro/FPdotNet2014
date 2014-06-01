@@ -96,11 +96,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Container.cs" />
     <Compile Include="DBSoalContext.cs" />
     <Compile Include="DetailHasil.xaml.cs">
       <DependentUpon>DetailHasil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Jawaban.cs" />
+    <Compile Include="TesLogikaFormilPage.xaml.cs">
+      <DependentUpon>TesLogikaFormilPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TesPadananKataPage.xaml.cs">
+      <DependentUpon>TesPadananKataPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TesResult.xaml.cs">
       <DependentUpon>TesResult.xaml</DependentUpon>
     </Compile>
@@ -143,9 +150,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TesResult.xaml">
+    <Page Include="TesLogikaFormilPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesPadananKataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="TipsMainPage.xaml">
       <Generator>MSBuild:Compile</Generator>

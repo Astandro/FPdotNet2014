@@ -30,13 +30,13 @@
                         <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center">
                         	<Run Text="Tes logika angka adalah suatu bentuk tes logika yang melibatkan perhitungan matematika dasar dan juga pengambilan kesimpulan yang valid dari pernyataan matematika yang diberikan"/>
                         </TextBlock>
-                        <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="Button_Click"/>
+                        <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="LogikaAngkaBtn_Click"/>
                     </Grid>
             </phone:PivotItem>
             <phone:PivotItem CacheMode="{x:Null}" Header="Padanan Kata" FontSize="22">
                 <Grid Margin="0,0,-152,-580">
                     <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center" Text="Tes ini akan mengetes kemampuan dalam mencari suatu kata yang memiliki arti yang sama dengan kata yang diberikan"/>
-                    <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90"/>
+                    <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="PadananKataBtn_Click"/>
                 </Grid>
             </phone:PivotItem>
         </phone:Pivot>

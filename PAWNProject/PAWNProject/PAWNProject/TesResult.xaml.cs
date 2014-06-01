@@ -17,9 +17,12 @@ namespace PAWNProject
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
+            base.OnNavigatedTo(e);
+            Container msg = new Container();
+            msg = (Container)PhoneApplicationService.Current.State["Message"];
+            textBlockSkor.Text = "Skor Anda : " + msg.Skor + "%";
         }
     }
 }
