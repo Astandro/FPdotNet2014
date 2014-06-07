@@ -102,7 +102,7 @@
       <DependentUpon>DetailHasil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Jawaban.cs" />
-    <Compile Include="Logical.cs" />
+    <Compile Include="Control.cs" />
     <Compile Include="TesLogikaFormilPage.xaml.cs">
       <DependentUpon>TesLogikaFormilPage.xaml</DependentUpon>
     </Compile>

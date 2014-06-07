@@ -26,9 +26,7 @@ namespace PAWNProject
         {
             using (DBSoalContext db = new DBSoalContext(DBSoalContext.ConnectionString))
             {
-                db.CreateIfNotExists();
-                db.LogDebug = true;
-                listSoal = db.SoalPsikotes.ToList();
+                listSoal = Control.LoadSoalFromDB(db);
                 nomorSoal.Text = "Soal nomor " + nomor + "/" + listSoal.Count;
                 texBlockSoal.Text = listSoal.ElementAt(0).Isi_Soal;
                 btnA.Content = listSoal.ElementAt(0).JawabanA;
@@ -36,22 +34,6 @@ namespace PAWNProject
                 btnC.Content = listSoal.ElementAt(0).JawabanC;
                 btnD.Content = listSoal.ElementAt(0).JawabanD;
             }
-        }
-
-        private int HitungBenar()
-        {
-            int benar = 0;
-            foreach (Jawaban item in jawabanUser)
-            {
-                foreach (SoalPsikotes soal in listSoal)
-                {
-                    if (item.jawaban.ToArray().First() == soal.JawabanBenar.ToArray().First() && item.kodeSoal.Equals(soal.Kode_Soal))
-                    {
-                        benar++;
-                    }
-                }
-            }
-            return benar;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -96,10 +78,10 @@ namespace PAWNProject
 
                 check = false;
                 int benar = 0;
-                benar = HitungBenar();
+                benar = Control.HitungBenar(jawabanUser, listSoal);
 
                 //MessageBox.Show("Nilai Anda : "+((double)benar/listSoal.Count)*100+"%");
-                var container = new Container { Skor = ((double)benar / listSoal.Count) * 100, JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString() };
+                var container = new Container { Skor = Control.HitungSkor(benar, listSoal), JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString() };
                 PhoneApplicationService.Current.State["Message"] = container;
                 NavigationService.Navigate(new Uri("/TesResult.xaml", UriKind.Relative));
             }
