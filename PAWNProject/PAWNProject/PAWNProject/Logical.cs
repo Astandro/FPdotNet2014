@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace PAWNProject
 {
-    class QuestionDB
+    class Logical
     {
-        List<Question> questions { get; set; }
     }
 }

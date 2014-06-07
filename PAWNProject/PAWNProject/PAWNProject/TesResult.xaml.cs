@@ -23,6 +23,17 @@ namespace PAWNProject
             Container msg = new Container();
             msg = (Container)PhoneApplicationService.Current.State["Message"];
             textBlockSkor.Text = "Skor Anda : " + msg.Skor + "%";
+
+        }
+
+        private void btnSelesai_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/PsikotesMainPage.xaml", UriKind.Relative));
+        }
+
+        private void btnDetail_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/DetailHasil.xaml", UriKind.Relative));
         }
     }
 }

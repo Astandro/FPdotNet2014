@@ -22,21 +22,42 @@ namespace PAWNProject
            
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private void LoadSoal()
         {
-            jawabanUser.Clear();
             using (DBSoalContext db = new DBSoalContext(DBSoalContext.ConnectionString))
             {
                 db.CreateIfNotExists();
                 db.LogDebug = true;
                 listSoal = db.SoalPsikotes.ToList();
-                nomorSoal.Text = "Soal nomor " + nomor + "/"+listSoal.Count;
+                nomorSoal.Text = "Soal nomor " + nomor + "/" + listSoal.Count;
                 texBlockSoal.Text = listSoal.ElementAt(0).Isi_Soal;
                 btnA.Content = listSoal.ElementAt(0).JawabanA;
                 btnB.Content = listSoal.ElementAt(0).JawabanB;
                 btnC.Content = listSoal.ElementAt(0).JawabanC;
                 btnD.Content = listSoal.ElementAt(0).JawabanD;
             }
+        }
+
+        private int HitungBenar()
+        {
+            int benar = 0;
+            foreach (Jawaban item in jawabanUser)
+            {
+                foreach (SoalPsikotes soal in listSoal)
+                {
+                    if (item.jawaban.ToArray().First() == soal.JawabanBenar.ToArray().First() && item.kodeSoal.Equals(soal.Kode_Soal))
+                    {
+                        benar++;
+                    }
+                }
+            }
+            return benar;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            jawabanUser.Clear();
+            LoadSoal();
         }
 
         private void btnLanjut_Click(object sender, RoutedEventArgs e)
@@ -75,19 +96,12 @@ namespace PAWNProject
 
                 check = false;
                 int benar = 0;
-                foreach (Jawaban item in jawabanUser)
-                {
-                    foreach (SoalPsikotes soal in listSoal)
-                    {
-                        if (item.jawaban.ToArray().First() == soal.JawabanBenar.ToArray().First() && item.kodeSoal.Equals(soal.Kode_Soal))
-                        {
-                            benar++;
-                        }
-                    }
-                }
+                benar = HitungBenar();
 
-                MessageBox.Show("Nilai Anda : "+((double)benar/listSoal.Count)*100+"%");
-                NavigationService.Navigate(new Uri("/PsikotesMainPage.xaml", UriKind.Relative));
+                //MessageBox.Show("Nilai Anda : "+((double)benar/listSoal.Count)*100+"%");
+                var container = new Container { Skor = ((double)benar / listSoal.Count) * 100, JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString() };
+                PhoneApplicationService.Current.State["Message"] = container;
+                NavigationService.Navigate(new Uri("/TesResult.xaml", UriKind.Relative));
             }
 
             if (check)
