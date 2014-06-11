@@ -15,6 +15,8 @@ namespace PAWNProject
     {
         List<SoalPsikotes> listSoal = new List<SoalPsikotes>();
         List<Jawaban> jawabanUser = new List<Jawaban>();
+
+
         int nomor = 1;
         public TestPage()
         {
