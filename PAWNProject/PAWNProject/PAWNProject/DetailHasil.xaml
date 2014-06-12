@@ -31,37 +31,37 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="12,0,10,0" Grid.Row="1">
-            <TextBlock HorizontalAlignment="Left" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
+            <TextBlock x:Name="soal1" HorizontalAlignment="Left" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
             	<Run Text="Soal MAT-01 (D)"/>
             	<LineBreak/>
             	<Run/>
             </TextBlock>
-            <Image HorizontalAlignment="Left" Height="50" Margin="275,13,0,0" VerticalAlignment="Top" Width="50" Source="/Assets/correct.png"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
+            <TextBlock x:Name="soal2" HorizontalAlignment="Left" Margin="0,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
             	<Run Text="Soal MAT-02 (B)"/>
             	<LineBreak/>
             	<Run/>
             </TextBlock>
-            <Image HorizontalAlignment="Left" Height="50" Margin="275,82,0,0" VerticalAlignment="Top" Width="50" Source="/Assets/wrong.png"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
+            <TextBlock x:Name="soal3" HorizontalAlignment="Left" Margin="0,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
             	<Run Text="Soal MAT-03 (A)"/>
             	<LineBreak/>
             	<Run/>
             </TextBlock>
-            <Image HorizontalAlignment="Left" Height="50" Margin="275,150,0,0" VerticalAlignment="Top" Width="50" Source="/Assets/wrong.png"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
+            <TextBlock x:Name="soal4" HorizontalAlignment="Left" Margin="0,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
             	<Run Text="Soal MAT-04 (A)"/>
             	<LineBreak/>
             	<Run/>
             </TextBlock>
-            <Image HorizontalAlignment="Left" Height="50" Margin="275,220,0,0" VerticalAlignment="Top" Width="50" Source="/Assets/correct.png"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
+            <TextBlock x:Name="soal5" HorizontalAlignment="Left" Margin="0,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="270" FontSize="22">
             	<Run Text="Soal MAT-05 (C)"/>
             	<LineBreak/>
             	<Run/>
             </TextBlock>
-            <Image HorizontalAlignment="Left" Height="50" Margin="275,291,0,0" VerticalAlignment="Top" Width="50" Source="/Assets/correct.png"/>
             <Button Content="Kembali" HorizontalAlignment="Left" Margin="309,533,0,0" VerticalAlignment="Top"/>
+            <TextBlock x:Name="jawab1" HorizontalAlignment="Left" Margin="309,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="22" Text="Salah "/>
+            <TextBlock x:Name="jawab2" HorizontalAlignment="Left" Margin="309,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="22" Text="Salah "/>
+            <TextBlock x:Name="jawab3" HorizontalAlignment="Left" Margin="309,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="22" Text="Salah "/>
+            <TextBlock x:Name="jawab4" HorizontalAlignment="Left" Margin="309,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="22" Text="Salah "/>
+            <TextBlock x:Name="jawab5" HorizontalAlignment="Left" Margin="309,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="66" FontSize="22" Text="Salah "/>
         </Grid>
     </Grid>
 

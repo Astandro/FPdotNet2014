@@ -35,7 +35,7 @@ namespace PAWNProject
             db.CreateIfNotExists();
             db.LogDebug = true;
             listSoal = (from soal in db.SoalPsikotes
-                        where soal.Jenis_Soal.Equals("Logika Formil")
+                        where soal.Jenis_Soal.Equals("Formal")
                         select soal).ToList();
             return listSoal;
         }

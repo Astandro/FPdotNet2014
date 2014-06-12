@@ -16,5 +16,25 @@ namespace PAWNProject
         {
             InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //base.OnNavigatedTo(e);
+            List<Jawaban> jawabanUser = new List<Jawaban>();
+            List<SoalPsikotes> listSoal = new List<SoalPsikotes>();
+
+            jawabanUser = (List<Jawaban>)PhoneApplicationService.Current.State["Jawaban"];
+            listSoal = (List<SoalPsikotes>)PhoneApplicationService.Current.State["Soal"];
+
+            soal1.Text = listSoal.ElementAt(0).Isi_Soal.ToString();
+            if (listSoal.ElementAt(0).JawabanBenar.ToString().Equals(jawabanUser.ElementAt(0).ToString()))
+            {
+                jawab1.Text = "Benar";
+            }
+            else
+            {
+                jawab1.Text = "Salah";
+            }
+        }
     }
 }
