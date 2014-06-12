@@ -115,7 +115,6 @@
     <Compile Include="TipsMainPage.xaml.cs">
       <DependentUpon>TipsMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ImgQuestion.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
