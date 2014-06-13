@@ -28,7 +28,7 @@ namespace PAWNProject
         {
             using (DBSoalContext db = new DBSoalContext(DBSoalContext.ConnectionString))
             {
-                listSoal = Control.LoadSoalFromDB(db);
+                listSoal = Control.LoadSoalLogikaAngkaFromDB(db);
                 nomorSoal.Text = "Soal nomor " + nomor + "/" + listSoal.Count;
                 texBlockSoal.Text = listSoal.ElementAt(0).Isi_Soal;
                 btnA.Content = listSoal.ElementAt(0).JawabanA;
@@ -85,6 +85,8 @@ namespace PAWNProject
                 //MessageBox.Show("Nilai Anda : "+((double)benar/listSoal.Count)*100+"%");
                 var container = new Container { Skor = Control.HitungSkor(benar, listSoal), JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString() };
                 PhoneApplicationService.Current.State["Message"] = container;
+                PhoneApplicationService.Current.State["Soal"] = listSoal;
+                PhoneApplicationService.Current.State["Jawaban"] = jawabanUser;
                 NavigationService.Navigate(new Uri("/TesResult.xaml", UriKind.Relative));
             }
 

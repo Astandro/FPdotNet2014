@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Windows.Media.Imaging;
 
 namespace PAWNProject
 {
@@ -26,7 +27,34 @@ namespace PAWNProject
             textBlockJumlahSalah.Text += " " + msg.JawabSalah.ToString();
             textBlockJumlahBenar.Text += " " + msg.JawabBenar.ToString();
             textBlockJumlahSoal.Text += " " + msg.JumlahSoal.ToString();
-
+            if ((double)msg.Skor==100)
+            {
+                BitmapImage tn = new BitmapImage();
+                tn.SetSource(Application.GetResourceStream(new Uri(@"Assets/100.png", UriKind.Relative)).Stream);
+                resultface.Source = tn;
+                Pesanresult.Text = "Sempurna! anda berhasil menjawab semua pertanyaan dengan benar";
+            }
+            else if ((double)msg.Skor >= 70 && (double)msg.Skor < 100)
+            {
+                BitmapImage tn = new BitmapImage();
+                tn.SetSource(Application.GetResourceStream(new Uri(@"Assets/70more.png", UriKind.Relative)).Stream);
+                resultface.Source = tn;
+                Pesanresult.Text = "Hebat! anda mendapatkan skor yang memuaskan";
+            }
+            else if ((double)msg.Skor >= 40 && (double)msg.Skor <70)
+            {
+                BitmapImage tn = new BitmapImage();
+                tn.SetSource(Application.GetResourceStream(new Uri(@"Assets/40more.png", UriKind.Relative)).Stream);
+                resultface.Source = tn;
+                Pesanresult.Text = "Selamat! anda berhasil melewati tes";
+            }
+            else if ((double)msg.Skor <40)
+            {
+                BitmapImage tn = new BitmapImage();
+                tn.SetSource(Application.GetResourceStream(new Uri(@"Assets/less40.png", UriKind.Relative)).Stream);
+                resultface.Source = tn;
+                Pesanresult.Text = "Maaf anda belum berhasil melewati tes";
+            }
         }
 
         private void btnSelesai_Click(object sender, RoutedEventArgs e)

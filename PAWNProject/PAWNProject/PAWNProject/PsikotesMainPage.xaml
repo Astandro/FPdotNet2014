@@ -19,27 +19,28 @@
             <ImageBrush ImageSource="/Assets/BG2.png"></ImageBrush>
         </Grid.Background>
         <phone:Pivot HorizontalAlignment="Left" Height="780" Margin="10,10,0,0" Title="Menu Psikotes" VerticalAlignment="Top" Width="460" Loaded="Pivot_Loaded">
-            <phone:PivotItem CacheMode="{x:Null}" Header="Logika Formil">
+            <phone:PivotItem CacheMode="{x:Null}" Header="Logika Formil" Height="580" VerticalAlignment="Top" Margin="12,28,-148,-151">
                 <Grid Height="560" Margin="0,0,-296,0">
                     <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" Text="Tes logika formil adalah suatu bentuk  tes yang menguji penalaran dalam mengambil kesimpulan yang benar secara logis dari pernyataan-pernyataan yang diberikan" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center"/>
                     <Button x:Name="LogikaFormilBtn" Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="LogikaFormilBtn_Click"/>
                 </Grid>
             </phone:PivotItem>
             <phone:PivotItem CacheMode="{x:Null}" Header="Logika Angka" Height="0" VerticalAlignment="Top">
-                    <Grid Margin="0,0,-152,-580">
-                        <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center">
+                <Grid Margin="0,0,-152,-580">
+                    <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center">
                         	<Run Text="Tes logika angka adalah suatu bentuk tes logika yang melibatkan perhitungan matematika dasar dan juga pengambilan kesimpulan yang valid dari pernyataan matematika yang diberikan"/>
-                        </TextBlock>
-                        <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="LogikaAngkaBtn_Click"/>
-                    </Grid>
+                    </TextBlock>
+                    <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="LogikaAngkaBtn_Click"/>
+                </Grid>
             </phone:PivotItem>
             <phone:PivotItem CacheMode="{x:Null}" Header="Padanan Kata" FontSize="22">
-                <Grid Margin="0,0,-152,-580">
+                <Grid Margin="0,0,-152,-64">
                     <TextBlock HorizontalAlignment="Left" Margin="18,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="219" Width="412" FontSize="24" TextAlignment="Center" Text="Tes ini akan mengetes kemampuan dalam mencari suatu kata yang memiliki arti yang sama dengan kata yang diberikan"/>
                     <Button Content="Mulai Tes" HorizontalAlignment="Left" Margin="230,393,0,0" VerticalAlignment="Top" Width="200" Height="90" Click="PadananKataBtn_Click"/>
                 </Grid>
             </phone:PivotItem>
         </phone:Pivot>
+        <TextBlock Margin="61,736,62,0" TextWrapping="Wrap" Text=" &lt;&lt; Geser untuk merubah pilihan &gt;&gt;" VerticalAlignment="Top" Height="54" FontSize="21"/>
 
     </Grid>
 

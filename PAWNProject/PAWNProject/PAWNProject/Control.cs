@@ -24,7 +24,7 @@ namespace PAWNProject
             db.CreateIfNotExists();
             db.LogDebug = true;
             listSoal = (from soal in db.SoalPsikotes
-                        where soal.Jenis_Soal.Equals("Logika Angka")
+                        where soal.Jenis_Soal.Equals("Angka")
                         select soal).ToList();
             return listSoal;
         }

@@ -121,7 +121,7 @@ namespace PAWNProject
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/TesResult.xaml", UriKind.Relative));
         }
     }
 }

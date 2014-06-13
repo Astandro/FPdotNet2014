@@ -188,6 +188,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\100.png" />
+    <Content Include="Assets\40more.png" />
+    <Content Include="Assets\70more.png" />
     <Content Include="Assets\accPlaceholder.jpg" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
@@ -195,6 +198,7 @@
     </Content>
     <Content Include="Assets\BG3.png" />
     <Content Include="Assets\correct.png" />
+    <Content Include="Assets\less40.png" />
     <Content Include="Assets\mainPanoramaBG.png" />
     <Content Include="Assets\BG2.png" />
     <Content Include="Assets\placeholder.jpg" />
