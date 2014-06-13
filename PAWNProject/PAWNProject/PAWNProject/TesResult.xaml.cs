@@ -19,10 +19,13 @@ namespace PAWNProject
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //base.OnNavigatedTo(e);
             Container msg = new Container();
             msg = (Container)PhoneApplicationService.Current.State["Message"];
-            textBlockSkor.Text = "Skor Anda : " + msg.Skor + "%";
+            msg.Skor = Math.Round((Double)msg.Skor);
+            textBlockSkor.Text = "Skor Anda " + msg.Skor.ToString() + "%";
+            textBlockJumlahSalah.Text += " " + msg.JawabSalah.ToString();
+            textBlockJumlahBenar.Text += " " + msg.JawabBenar.ToString();
+            textBlockJumlahSoal.Text += " " + msg.JumlahSoal.ToString();
 
         }
 
