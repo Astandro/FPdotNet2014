@@ -32,13 +32,19 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Margin="56,38,54,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="422" FontSize="24" TextAlignment="Center">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,22,14,-22">
+            <TextBlock Margin="56,38,54,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="422" FontSize="22" TextAlignment="Center">
         		<Run Text="Pada tes"/>
         		<Run Text=" ini akan diberikan beberapa "/>
-        		<Run Text="pertanyaan yang mencerimkan kepribadian manusia,jenis kepribadian dapat ditentukan dari jawaban-jawaban yang diberikan oleh peserta"/>
+        		<Run Text="pertanyaan yang mencerimkan kepribadian manusia,jenis kepribadian dapat ditentukan dari jawaban-jawaban yang diberikan oleh peserta."/>
             </TextBlock>
-            <Button Content="Mulai Tes" HorizontalAlignment="Left" Height="81" Margin="191,356,0,0" VerticalAlignment="Top" Width="179"/>
+            <TextBlock Margin="56,225,54,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="109" FontSize="22" TextAlignment="Center">
+                <Run Text="Untuk soal kode KELEMAHAN, pilih opsi yang mencerminkan KELEMAHAN Anda." />
+            </TextBlock>
+            <TextBlock Margin="56,325,54,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="109" FontSize="22" TextAlignment="Center">
+                <Run Text="Untuk soal kode KELEBIHAN, pilih opsi yang mencerminkan KELEBIHAN Anda." />
+            </TextBlock>
+            <Button Content="Mulai Tes" HorizontalAlignment="Left" Height="81" Margin="240,460,0,0" VerticalAlignment="Top" Width="179" Click="Button_Click"/>
 
         </Grid>
     </Grid>

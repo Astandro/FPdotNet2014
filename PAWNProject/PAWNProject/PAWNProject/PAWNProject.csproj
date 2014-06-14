@@ -103,6 +103,9 @@
     </Compile>
     <Compile Include="Jawaban.cs" />
     <Compile Include="Control.cs" />
+    <Compile Include="TesKepribadianPage.xaml.cs">
+      <DependentUpon>TesKepribadianPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TesLogikaFormilPage.xaml.cs">
       <DependentUpon>TesLogikaFormilPage.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetailHasil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TesKepribadianPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -201,8 +201,6 @@ public class DebugWriter : TextWriter
 		
 		private string _Kode_Soal;
 		
-		private string _Isi_Soal;
-		
 		private string _JawabanA;
 		
 		private string _JawabanB;
@@ -211,14 +209,14 @@ public class DebugWriter : TextWriter
 		
 		private string _JawabanD;
 		
+		private string _Jenis_Soal;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnKode_SoalChanging(string value);
     partial void OnKode_SoalChanged();
-    partial void OnIsi_SoalChanging(string value);
-    partial void OnIsi_SoalChanged();
     partial void OnJawabanAChanging(string value);
     partial void OnJawabanAChanged();
     partial void OnJawabanBChanging(string value);
@@ -227,6 +225,8 @@ public class DebugWriter : TextWriter
     partial void OnJawabanCChanged();
     partial void OnJawabanDChanging(string value);
     partial void OnJawabanDChanged();
+    partial void OnJenis_SoalChanging(string value);
+    partial void OnJenis_SoalChanged();
     #endregion
 		
 		public SoalKepribadian()
@@ -250,26 +250,6 @@ public class DebugWriter : TextWriter
 					this._Kode_Soal = value;
 					this.SendPropertyChanged("Kode_Soal");
 					this.OnKode_SoalChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Isi_Soal", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
-		public string Isi_Soal
-		{
-			get
-			{
-				return this._Isi_Soal;
-			}
-			set
-			{
-				if ((this._Isi_Soal != value))
-				{
-					this.OnIsi_SoalChanging(value);
-					this.SendPropertyChanging();
-					this._Isi_Soal = value;
-					this.SendPropertyChanged("Isi_Soal");
-					this.OnIsi_SoalChanged();
 				}
 			}
 		}
@@ -350,6 +330,26 @@ public class DebugWriter : TextWriter
 					this._JawabanD = value;
 					this.SendPropertyChanged("JawabanD");
 					this.OnJawabanDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Jenis_Soal", DbType="NVarChar(300)")]
+		public string Jenis_Soal
+		{
+			get
+			{
+				return this._Jenis_Soal;
+			}
+			set
+			{
+				if ((this._Jenis_Soal != value))
+				{
+					this.OnJenis_SoalChanging(value);
+					this.SendPropertyChanging();
+					this._Jenis_Soal = value;
+					this.SendPropertyChanged("Jenis_Soal");
+					this.OnJenis_SoalChanged();
 				}
 			}
 		}
