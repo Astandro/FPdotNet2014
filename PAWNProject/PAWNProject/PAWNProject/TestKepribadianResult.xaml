@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PAWNProject.TestKepribadianResult"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/BG3.png">
+            </ImageBrush>
+        </Grid.Background>
+
+        <phone:Panorama x:Name="PanoramaHasil" Title="Hasil" Margin="0,0,0,97">
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="Sifat Dominan">
+                <Grid>
+                    <Image x:Name="hasilImage" Height="245" Margin="98,10,98,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="infoHasil" HorizontalAlignment="Left" Margin="67,282,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="303" Height="104" FontSize="18"/>
+                </Grid>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Keunggulan">
+                <StackPanel>
+                    <TextBlock x:Name="keunggulan1" TextWrapping="Wrap" Text="TextBlock" Height="68" Margin="0,0,0,40" FontSize="25" HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="keunggulan2" TextWrapping="Wrap" Text="TextBlock" Height="68" Margin="0,0,0,40" FontSize="25" />
+                    <TextBlock x:Name="keunggulan3" TextWrapping="Wrap" Text="TextBlock" Height="68"  Margin="0,0,0,40" FontSize="25"/>
+                </StackPanel>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Kelemahan">
+                <StackPanel>
+                    <TextBlock x:Name="kelemahan1" TextWrapping="Wrap" Text="TextBlock" Height="68" Margin="0,0,0,40" FontSize="25" HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="kelemahan2" TextWrapping="Wrap" Text="TextBlock" Height="68" Margin="0,0,0,40" FontSize="25" />
+                    <TextBlock x:Name="kelemahan3" TextWrapping="Wrap" Text="TextBlock" Height="68"  Margin="0,0,0,40" FontSize="25"/>
+                </StackPanel>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="Profesi">
+                <Grid>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Profesi yang cocok untuk kepribadian anda adalah" VerticalAlignment="Top" Height="55"/>
+                    <TextBlock x:Name="profesiText" HorizontalAlignment="Center" Margin="15,144,5,-8" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="250" Width="400" TextAlignment="Center" LineHeight="10" FontSize="35"/>
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+        <Button Content="Kembali" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="296,708,0,0" Width="174" Height="82" Click="Button_Click"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>

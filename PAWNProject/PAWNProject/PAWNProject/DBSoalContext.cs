@@ -168,6 +168,9 @@ public class DebugWriter : TextWriter
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertHasilKepribadian(HasilKepribadian instance);
+    partial void UpdateHasilKepribadian(HasilKepribadian instance);
+    partial void DeleteHasilKepribadian(HasilKepribadian instance);
     partial void InsertSoalKepribadian(SoalKepribadian instance);
     partial void UpdateSoalKepribadian(SoalKepribadian instance);
     partial void DeleteSoalKepribadian(SoalKepribadian instance);
@@ -175,6 +178,14 @@ public class DebugWriter : TextWriter
     partial void UpdateSoalPsikotes(SoalPsikotes instance);
     partial void DeleteSoalPsikotes(SoalPsikotes instance);
     #endregion
+		
+		public System.Data.Linq.Table<HasilKepribadian> HasilKepribadian
+		{
+			get
+			{
+				return this.GetTable<HasilKepribadian>();
+			}
+		}
 		
 		public System.Data.Linq.Table<SoalKepribadian> SoalKepribadian
 		{
@@ -189,6 +200,284 @@ public class DebugWriter : TextWriter
 			get
 			{
 				return this.GetTable<SoalPsikotes>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute()]
+	public partial class HasilKepribadian : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Nama_Kepribadian;
+		
+		private string _Info_Kepribadian;
+		
+		private string _Keunggulan1;
+		
+		private string _Keunggulan2;
+		
+		private string _Keunggulan3;
+		
+		private string _Kelemahan1;
+		
+		private string _Kelemahan2;
+		
+		private string _Kelemahan3;
+		
+		private string _Pekerjaan;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnNama_KepribadianChanging(string value);
+    partial void OnNama_KepribadianChanged();
+    partial void OnInfo_KepribadianChanging(string value);
+    partial void OnInfo_KepribadianChanged();
+    partial void OnKeunggulan1Changing(string value);
+    partial void OnKeunggulan1Changed();
+    partial void OnKeunggulan2Changing(string value);
+    partial void OnKeunggulan2Changed();
+    partial void OnKeunggulan3Changing(string value);
+    partial void OnKeunggulan3Changed();
+    partial void OnKelemahan1Changing(string value);
+    partial void OnKelemahan1Changed();
+    partial void OnKelemahan2Changing(string value);
+    partial void OnKelemahan2Changed();
+    partial void OnKelemahan3Changing(string value);
+    partial void OnKelemahan3Changed();
+    partial void OnPekerjaanChanging(string value);
+    partial void OnPekerjaanChanged();
+    #endregion
+		
+		public HasilKepribadian()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nama_Kepribadian", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Nama_Kepribadian
+		{
+			get
+			{
+				return this._Nama_Kepribadian;
+			}
+			set
+			{
+				if ((this._Nama_Kepribadian != value))
+				{
+					this.OnNama_KepribadianChanging(value);
+					this.SendPropertyChanging();
+					this._Nama_Kepribadian = value;
+					this.SendPropertyChanged("Nama_Kepribadian");
+					this.OnNama_KepribadianChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Info_Kepribadian", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Info_Kepribadian
+		{
+			get
+			{
+				return this._Info_Kepribadian;
+			}
+			set
+			{
+				if ((this._Info_Kepribadian != value))
+				{
+					this.OnInfo_KepribadianChanging(value);
+					this.SendPropertyChanging();
+					this._Info_Kepribadian = value;
+					this.SendPropertyChanged("Info_Kepribadian");
+					this.OnInfo_KepribadianChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Keunggulan1", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Keunggulan1
+		{
+			get
+			{
+				return this._Keunggulan1;
+			}
+			set
+			{
+				if ((this._Keunggulan1 != value))
+				{
+					this.OnKeunggulan1Changing(value);
+					this.SendPropertyChanging();
+					this._Keunggulan1 = value;
+					this.SendPropertyChanged("Keunggulan1");
+					this.OnKeunggulan1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Keunggulan2", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Keunggulan2
+		{
+			get
+			{
+				return this._Keunggulan2;
+			}
+			set
+			{
+				if ((this._Keunggulan2 != value))
+				{
+					this.OnKeunggulan2Changing(value);
+					this.SendPropertyChanging();
+					this._Keunggulan2 = value;
+					this.SendPropertyChanged("Keunggulan2");
+					this.OnKeunggulan2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Keunggulan3", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Keunggulan3
+		{
+			get
+			{
+				return this._Keunggulan3;
+			}
+			set
+			{
+				if ((this._Keunggulan3 != value))
+				{
+					this.OnKeunggulan3Changing(value);
+					this.SendPropertyChanging();
+					this._Keunggulan3 = value;
+					this.SendPropertyChanged("Keunggulan3");
+					this.OnKeunggulan3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kelemahan1", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Kelemahan1
+		{
+			get
+			{
+				return this._Kelemahan1;
+			}
+			set
+			{
+				if ((this._Kelemahan1 != value))
+				{
+					this.OnKelemahan1Changing(value);
+					this.SendPropertyChanging();
+					this._Kelemahan1 = value;
+					this.SendPropertyChanged("Kelemahan1");
+					this.OnKelemahan1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kelemahan2", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Kelemahan2
+		{
+			get
+			{
+				return this._Kelemahan2;
+			}
+			set
+			{
+				if ((this._Kelemahan2 != value))
+				{
+					this.OnKelemahan2Changing(value);
+					this.SendPropertyChanging();
+					this._Kelemahan2 = value;
+					this.SendPropertyChanged("Kelemahan2");
+					this.OnKelemahan2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kelemahan3", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Kelemahan3
+		{
+			get
+			{
+				return this._Kelemahan3;
+			}
+			set
+			{
+				if ((this._Kelemahan3 != value))
+				{
+					this.OnKelemahan3Changing(value);
+					this.SendPropertyChanging();
+					this._Kelemahan3 = value;
+					this.SendPropertyChanged("Kelemahan3");
+					this.OnKelemahan3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pekerjaan", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Pekerjaan
+		{
+			get
+			{
+				return this._Pekerjaan;
+			}
+			set
+			{
+				if ((this._Pekerjaan != value))
+				{
+					this.OnPekerjaanChanging(value);
+					this.SendPropertyChanging();
+					this._Pekerjaan = value;
+					this.SendPropertyChanged("Pekerjaan");
+					this.OnPekerjaanChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

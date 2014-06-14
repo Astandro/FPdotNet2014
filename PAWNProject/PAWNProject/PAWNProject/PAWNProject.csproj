@@ -115,6 +115,9 @@
     <Compile Include="TesResult.xaml.cs">
       <DependentUpon>TesResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TestKepribadianResult.xaml.cs">
+      <DependentUpon>TestKepribadianResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TipsMainPage.xaml.cs">
       <DependentUpon>TipsMainPage.xaml</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="TestKepribadianResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TipsMainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -205,10 +212,14 @@
     </Content>
     <Content Include="Assets\BG3.png" />
     <Content Include="Assets\correct.png" />
+    <Content Include="Assets\Koleris.jpg" />
     <Content Include="Assets\less40.png" />
     <Content Include="Assets\mainPanoramaBG.png" />
     <Content Include="Assets\BG2.png" />
+    <Content Include="Assets\Melankolis.jpg" />
     <Content Include="Assets\placeholder.jpg" />
+    <Content Include="Assets\Plegmatis.jpg" />
+    <Content Include="Assets\Sanguinis.jpg" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

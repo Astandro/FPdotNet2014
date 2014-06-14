@@ -16,6 +16,8 @@ namespace PAWNProject
         List<SoalKepribadian> listSoal = new List<SoalKepribadian>();
         List<Jawaban> jawabanUser = new List<Jawaban>();
         int nomor = 1;
+        HasilKepribadian pribadi = new HasilKepribadian();
+        DBSoalContext db = new DBSoalContext(DBSoalContext.ConnectionString);
         public TesKepribadianPage()
         {
             InitializeComponent();
@@ -23,21 +25,24 @@ namespace PAWNProject
 
         private void LoadSoal()
         {
-            using (DBSoalContext db = new DBSoalContext(DBSoalContext.ConnectionString))
-            {
+            
                 listSoal = Control.loadsoalKepribadianFromDB(db);
                 jenisSoal.Text = listSoal.ElementAt(0).Jenis_Soal;
                 txtBtnA.Text = listSoal.ElementAt(0).JawabanA;
                 txtBtnB.Text = listSoal.ElementAt(0).JawabanB;
                 txtBtnC.Text = listSoal.ElementAt(0).JawabanC;
                 txtBtnD.Text = listSoal.ElementAt(0).JawabanD;
-            }
+         
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             jawabanUser.Clear();
             LoadSoal();
+            if (listSoal.Count > 4)
+            {
+                listSoal.RemoveRange(4, listSoal.Count - 4);
+            }
         }
 
         private void btnLanjut_Click(object sender, RoutedEventArgs e)
@@ -71,18 +76,14 @@ namespace PAWNProject
 
             if (btnLanjut.Content.Equals("Selesai"))
             {
-                //temp.kodeSoal = listSoal.ElementAt(nomor - 1).Kode_Soal;
-                //jawabanUser.Add(temp);
+                
 
-                //check = false;
-                //int benar = 0;
-                //benar = Control.HitungBenar(jawabanUser, listSoal);
-
-                //var container = new Container { Skor = Control.HitungSkor(benar, listSoal), JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString() };
-                //PhoneApplicationService.Current.State["Message"] = container;
-                //PhoneApplicationService.Current.State["Soal"] = listSoal;
-                //PhoneApplicationService.Current.State["Jawaban"] = jawabanUser;
-                //NavigationService.Navigate(new Uri("/TesResult.xaml", UriKind.Relative));
+                check = false;
+                int hasil = 0;
+                hasil = Control.HasilKepribadian(jawabanUser);
+                pribadi = Control.LoadHasilKepribadian(db, hasil);
+                PhoneApplicationService.Current.State["kepribadian"] = pribadi;
+                NavigationService.Navigate(new Uri("/TestKepribadianResult.xaml", UriKind.Relative));
             }
 
             if (check)

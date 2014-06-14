@@ -60,6 +60,17 @@ namespace PAWNProject
             return listSoal;
         }
 
+        public static HasilKepribadian LoadHasilKepribadian(DBSoalContext db, int indicator)
+        {
+            HasilKepribadian hk = new HasilKepribadian();
+            db.CreateIfNotExists();
+            db.LogDebug = true;
+            hk = (from p in db.HasilKepribadian
+                               where p.Id.Equals(indicator)
+                               select p).FirstOrDefault();
+            return hk;
+        }
+
         public static double HitungSkor(int benar, List<SoalPsikotes> listSoal)
         {
             return ((double)benar / listSoal.Count) * 100;
@@ -83,10 +94,10 @@ namespace PAWNProject
             return benar;
         }
 
-        public static int[] HasilKepribadian(List<Jawaban> jawabanUser)
+        public static int HasilKepribadian(List<Jawaban> jawabanUser)
         {
             int[] jawaban = new int[4];
-            jawaban.SetValue(0);
+            int hasil = 0;
             foreach (var item in jawabanUser)
             {
                 if (item.jawaban.Equals("A"))
@@ -98,8 +109,14 @@ namespace PAWNProject
                 else if (item.jawaban.Equals("D"))
                     jawaban[3]++;
 
+
             }
-            return jawaban;
+            for(int i =0;i<jawaban.Count();i++)
+            {
+                if (jawaban[i]> hasil)
+                    hasil = i;
+            }
+            return hasil;
         }
     }
 }
