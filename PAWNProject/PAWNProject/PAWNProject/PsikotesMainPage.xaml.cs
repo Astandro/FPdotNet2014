@@ -16,9 +16,6 @@ namespace PAWNProject
         {
             InitializeComponent();
         }
-
-
-
  
 
         private void Pivot_Loaded(object sender, RoutedEventArgs e)

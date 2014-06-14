@@ -31,18 +31,13 @@
         <Grid HorizontalAlignment="Left" Height="587" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="460">
             <TextBlock x:Name="textBlockSkor" TextWrapping="Wrap" Text="Skor Anda : 140%" FontSize="48" Margin="0,0,14,506"/>
             <TextBlock x:Name="textBlockJumlahSoal" TextWrapping="Wrap" FontSize="26" Text="Jumlah Soal    :" Margin="0,81,14,455"/>
-            <TextBlock x:Name="textBlockJumlahBenar" TextWrapping="Wrap" FontSize="26" Margin="0,132,14,404">
-        		<Run Text="Jumlah Benar  :"/>
-        		<LineBreak/>
-        		<Run/>
-        		<LineBreak/>
-        		<Run/>
-            </TextBlock>
+            <TextBlock x:Name="textBlockJumlahBenar" TextWrapping="Wrap" FontSize="26" Margin="0,132,14,404" Text="Jumlah Benar   :"/>
             <TextBlock x:Name="textBlockJumlahSalah" TextWrapping="Wrap" FontSize="26" Text="Jumlah Salah   :" Margin="0,183,14,353"/>
-            <Image HorizontalAlignment="Left" Margin="0,234,0,91" Width="460" Source="/Assets/placeholder.jpg"/>
             <Button x:Name="btnCobaLagi" Content="Coba Lagi" Margin="0,496,306,10"/>
             <Button x:Name="btnDetail" Content="Detail" Margin="149,496,157,10" Click="btnDetail_Click"/>
             <Button x:Name="btnSelesai" Content="Selesai" Margin="296,496,10,10" Click="btnSelesai_Click"/>
+            <Image x:Name="resultface" HorizontalAlignment="Left" Height="150" Margin="25,272,0,0" VerticalAlignment="Top" Width="150"/>
+            <TextBlock x:Name="Pesanresult" HorizontalAlignment="Left" Margin="207,272,0,0" TextWrapping="Wrap" Text="Pesan Disini" VerticalAlignment="Top" Height="150" Width="210" TextAlignment="Center" FontSize="27"/>
         </Grid>
 
         <!--ContentPanel - place additional content here-->
