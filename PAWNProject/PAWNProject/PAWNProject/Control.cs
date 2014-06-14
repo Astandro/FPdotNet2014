@@ -18,6 +18,15 @@ namespace PAWNProject
             return listSoal;
         }
 
+        public static List<SoalKepribadian> loadsoalKepribadianFromDB(DBSoalContext db)
+        {
+            List<SoalKepribadian> listSoal = new List<SoalKepribadian>();
+            db.CreateIfNotExists();
+            db.LogDebug = true;
+            listSoal = db.SoalKepribadian.ToList();
+            return listSoal;
+        }
+
         public static List<SoalPsikotes> LoadSoalLogikaAngkaFromDB(DBSoalContext db)
         {
             List<SoalPsikotes> listSoal = new List<SoalPsikotes>();
@@ -56,6 +65,8 @@ namespace PAWNProject
             return ((double)benar / listSoal.Count) * 100;
         }
 
+
+
         public static int HitungBenar(List<Jawaban> jawabanUser, List<SoalPsikotes> listSoal)
         {
             int benar = 0;
@@ -70,6 +81,25 @@ namespace PAWNProject
                 }
             }
             return benar;
+        }
+
+        public static int[] HasilKepribadian(List<Jawaban> jawabanUser)
+        {
+            int[] jawaban = new int[4];
+            jawaban.SetValue(0);
+            foreach (var item in jawabanUser)
+            {
+                if (item.jawaban.Equals("A"))
+                    jawaban[0]++;
+                else if (item.jawaban.Equals("B"))
+                    jawaban[1]++;
+                else if (item.jawaban.Equals("C"))
+                    jawaban[2]++;
+                else if (item.jawaban.Equals("D"))
+                    jawaban[3]++;
+
+            }
+            return jawaban;
         }
     }
 }
