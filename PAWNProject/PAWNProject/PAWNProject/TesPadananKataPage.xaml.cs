@@ -29,10 +29,10 @@ namespace PAWNProject
                 listSoal = Control.LoadSoalPadananKataFromDB(db);
                 nomorSoal.Text = "Soal nomor " + nomor + "/" + listSoal.Count;
                 texBlockSoal.Text = listSoal.ElementAt(0).Isi_Soal;
-                btnA.Content = listSoal.ElementAt(0).JawabanA;
-                btnB.Content = listSoal.ElementAt(0).JawabanB;
-                btnC.Content = listSoal.ElementAt(0).JawabanC;
-                btnD.Content = listSoal.ElementAt(0).JawabanD;
+                txtBtnA.Text = listSoal.ElementAt(0).JawabanA;
+                txtBtnB.Text = listSoal.ElementAt(0).JawabanB;
+                txtBtnC.Text = listSoal.ElementAt(0).JawabanC;
+                txtBtnD.Text = listSoal.ElementAt(0).JawabanD;
             }
         }
 
@@ -102,10 +102,10 @@ namespace PAWNProject
                 if (nomor < listSoal.Count)
                 {
                     texBlockSoal.Text = listSoal.ElementAt(nomor).Isi_Soal;
-                    btnA.Content = listSoal.ElementAt(nomor).JawabanA;
-                    btnB.Content = listSoal.ElementAt(nomor).JawabanB;
-                    btnC.Content = listSoal.ElementAt(nomor).JawabanC;
-                    btnD.Content = listSoal.ElementAt(nomor).JawabanD;
+                    txtBtnA.Text = listSoal.ElementAt(nomor).JawabanA;
+                    txtBtnB.Text = listSoal.ElementAt(nomor).JawabanB;
+                    txtBtnC.Text = listSoal.ElementAt(nomor).JawabanC;
+                    txtBtnD.Text = listSoal.ElementAt(nomor).JawabanD;
                     btnA.IsChecked = false;
                     btnB.IsChecked = false;
                     btnC.IsChecked = false;

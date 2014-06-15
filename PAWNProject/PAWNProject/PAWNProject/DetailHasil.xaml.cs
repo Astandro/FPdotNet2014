@@ -28,13 +28,7 @@ namespace PAWNProject
 
             soal1.Text = listSoal.ElementAt(0).Isi_Soal.ToString();
             if (listSoal.ElementAt(0).JawabanBenar.ToString().Equals(jawabanUser.ElementAt(0).jawaban.ToString()))
-            {
                 jawab1.Text = "Benar";
-            }
-            else
-            {
-                jawab1.Text = "Salah";
-            }
             soal2.Text = listSoal.ElementAt(1).Isi_Soal.ToString();
             if (listSoal.ElementAt(1).JawabanBenar.ToString().Equals(jawabanUser.ElementAt(1).jawaban.ToString()))
             {
