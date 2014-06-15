@@ -24,24 +24,22 @@ namespace PAWNProject
         }
 
         private void LoadSoal()
-        {
-            
+        {   
                 listSoal = Control.loadsoalKepribadianFromDB(db);
                 jenisSoal.Text = listSoal.ElementAt(0).Jenis_Soal;
                 txtBtnA.Text = listSoal.ElementAt(0).JawabanA;
                 txtBtnB.Text = listSoal.ElementAt(0).JawabanB;
                 txtBtnC.Text = listSoal.ElementAt(0).JawabanC;
                 txtBtnD.Text = listSoal.ElementAt(0).JawabanD;
-         
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             jawabanUser.Clear();
             LoadSoal();
-            if (listSoal.Count > 4)
+            if (listSoal.Count > 10)
             {
-                listSoal.RemoveRange(4, listSoal.Count - 4);
+                listSoal.RemoveRange(10, listSoal.Count - 10);
             }
         }
 
@@ -53,21 +51,25 @@ namespace PAWNProject
             {
                 temp.jawaban = "A";
                 check = true;
+                jawabanUser.Add(temp);
             }
             else if (btnB.IsChecked == true)
             {
                 temp.jawaban = "B";
                 check = true;
+                jawabanUser.Add(temp);
             }
             else if (btnC.IsChecked == true)
             {
                 temp.jawaban = "C";
                 check = true;
+                jawabanUser.Add(temp);
             }
             else if (btnD.IsChecked == true)
             {
                 temp.jawaban = "D";
                 check = true;
+                jawabanUser.Add(temp);
             }
             else
             {
@@ -76,10 +78,8 @@ namespace PAWNProject
 
             if (btnLanjut.Content.Equals("Selesai"))
             {
-                
-
                 check = false;
-                int hasil = 0;
+                int hasil;
                 hasil = Control.HasilKepribadian(jawabanUser);
                 pribadi = Control.LoadHasilKepribadian(db, hasil);
                 PhoneApplicationService.Current.State["kepribadian"] = pribadi;
@@ -89,8 +89,7 @@ namespace PAWNProject
             if (check)
             {
                 temp.kodeSoal = listSoal.ElementAt(nomor - 1).Kode_Soal;
-                jawabanUser.Add(temp);
-
+                
                 if (nomor == listSoal.Count - 1)
                 {
                     btnLanjut.Content = "Selesai";

@@ -108,12 +108,10 @@ namespace PAWNProject
                     jawaban[2]++;
                 else if (item.jawaban.Equals("D"))
                     jawaban[3]++;
-
-
             }
             for(int i =0;i<jawaban.Count();i++)
             {
-                if (jawaban[i]> hasil)
+                if (jawaban[i] > hasil)
                     hasil = i;
             }
             return hasil;
