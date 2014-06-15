@@ -66,5 +66,10 @@ namespace PAWNProject
         {
             NavigationService.Navigate(new Uri("/DetailHasil.xaml", UriKind.Relative));
         }
+
+        private void btnCobaLagi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

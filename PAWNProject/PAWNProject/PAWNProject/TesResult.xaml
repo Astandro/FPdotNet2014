@@ -33,7 +33,7 @@
             <TextBlock x:Name="textBlockJumlahSoal" TextWrapping="Wrap" FontSize="26" Text="Jumlah Soal    :" Margin="0,81,14,455"/>
             <TextBlock x:Name="textBlockJumlahBenar" TextWrapping="Wrap" FontSize="26" Margin="0,132,14,404" Text="Jumlah Benar   :"/>
             <TextBlock x:Name="textBlockJumlahSalah" TextWrapping="Wrap" FontSize="26" Text="Jumlah Salah   :" Margin="0,183,14,353"/>
-            <Button x:Name="btnCobaLagi" Content="Coba Lagi" Margin="0,496,306,10"/>
+            <Button x:Name="btnCobaLagi" Content="Coba Lagi" Margin="0,496,306,10" Click="btnCobaLagi_Click"/>
             <Button x:Name="btnDetail" Content="Detail" Margin="149,496,157,10" Click="btnDetail_Click"/>
             <Button x:Name="btnSelesai" Content="Selesai" Margin="296,496,10,10" Click="btnSelesai_Click"/>
             <Image x:Name="resultface" HorizontalAlignment="Left" Height="150" Margin="25,272,0,0" VerticalAlignment="Top" Width="150"/>
