@@ -22,7 +22,7 @@ namespace PAWNProject
             listTips.Add("Pelajari bentuk-bentuk soal psikotes dengan baik untuk mengakrabkan diri anda dengan soal-soal psikotes sehingga lebih memudahkan anda sendiri pada waktu mengikuti ujian psikotes yang sebenarnya.");
             listTips.Add("Ketika menghadapi tes kuantitatif (tes angka/numerik), anda harus ingat bahwa setiap soal bobot nilainya sama. Jadi, alokasikanlah energi konsentrasi dan waktu anda pada seluruh soal secara merata.");
             listTips.Add("Ketika menghadapi tes kode dan ingatan, cermatilah keunikan yang dimiliki oleh setiap kode yang ada.");
-            listTips.Add("Ketika menghadapi ujian psikotes kepribadian seperti Enneagram, dan MBTI, jadilah diri anda sendiri yang terbaik. Jawablah pertanyaan yang paling sesuai dengan kondisi diri anda.");
+            listTips.Add("Ketika menghadapi ujian kepribadian, jadilah diri anda sendiri yang terbaik. Jawablah pertanyaan yang paling sesuai dengan kondisi diri anda.");
             btnTipsBefore.IsEnabled = false;
 
             
