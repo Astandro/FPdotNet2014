@@ -54,20 +54,25 @@ namespace PAWNProject
             else if (counter == 4)
             {
                 textBlockTips.Text = listTips.ElementAt(4);
-                btnTipsNext.IsEnabled = false;
                 counter++;
                 tipsCounter.Text = ("Tips " + counter + "/7");
             }
             else if (counter == 5)
             {
                 textBlockTips.Text = listTips.ElementAt(5);
-                btnTipsNext.IsEnabled = false;
                 counter++;
                 tipsCounter.Text = ("Tips " + counter + "/7");
             }
             else if (counter == 6)
             {
                 textBlockTips.Text = listTips.ElementAt(6);
+                btnTipsNext.IsEnabled = false;
+                counter++;
+                tipsCounter.Text = ("Tips " + counter + "/7");
+            }
+            else if (counter == 7)
+            {
+                textBlockTips.Text = listTips.ElementAt(7);
                 btnTipsNext.IsEnabled = false;
                 counter++;
                 tipsCounter.Text = ("Tips " + counter + "/7");
