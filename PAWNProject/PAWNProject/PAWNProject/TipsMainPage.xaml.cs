@@ -24,6 +24,7 @@ namespace PAWNProject
             listTips.Add("Ketika menghadapi tes kode dan ingatan, cermatilah keunikan yang dimiliki oleh setiap kode yang ada.");
             listTips.Add("Ketika menghadapi ujian psikotes kepribadian seperti Enneagram, dan MBTI, jadilah diri anda sendiri yang terbaik. Jawablah pertanyaan yang paling sesuai dengan kondisi diri anda.");
             btnTipsBefore.IsEnabled = false;
+
             
             tipsCounter.Text = ("Tips " + counter + "/5");
         }
