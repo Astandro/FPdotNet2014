@@ -18,11 +18,11 @@ namespace PAWNProject
         {
             InitializeComponent();
 
-            listTips.Add("Sebelum menghadapi psikotes usahakan keadaan pikiran tenang dan rileks, badan dalam keadaan sehat dan telah makan");
-            listTips.Add("blablabla, ini adalah tips psikotes nomor 2. ntar tolong diedit ya, yang bener2 tips psikotes");
-            listTips.Add("blablabla, ini adalah tips psikotes nomor 3. ntar tolong diedit ya, yang bener2 tips psikotes");
-            listTips.Add("blablabla, ini adalah tips psikotes nomor 4. ntar tolong diedit ya, yang bener2 tips psikotes");
-            listTips.Add("blablabla, ini adalah tips psikotes nomor 5. ntar tolong diedit ya, yang bener2 tips psikotes");
+            listTips.Add("Sebelum menghadapi psikotes usahakan keadaan pikiran tenang , rileks, dan kondisi badan dalam keadaan fit.");
+            listTips.Add("Pelajari bentuk-bentuk soal psikotes dengan baik untuk mengakrabkan diri anda dengan soal-soal psikotes sehingga lebih memudahkan anda sendiri pada waktu mengikuti ujian psikotes yang sebenarnya.");
+            listTips.Add("Ketika menghadapi tes kuantitatif (tes angka/numerik), anda harus ingat bahwa setiap soal bobot nilainya sama. Jadi, alokasikanlah energi konsentrasi dan waktu anda pada seluruh soal secara merata.");
+            listTips.Add("Ketika menghadapi tes kode dan ingatan, cermatilah keunikan yang dimiliki oleh setiap kode yang ada.");
+            listTips.Add("Ketika menghadapi ujian psikotes kepribadian seperti Enneagram, dan MBTI, jadilah diri anda sendiri yang terbaik. Jawablah pertanyaan yang paling sesuai dengan kondisi diri anda.");
             btnTipsBefore.IsEnabled = false;
             
             tipsCounter.Text = ("Tips " + counter + "/5");
