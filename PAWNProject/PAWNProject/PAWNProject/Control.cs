@@ -111,10 +111,11 @@ namespace PAWNProject
             }
             for(int i =0;i<jawaban.Count();i++)
             {
-                if (jawaban[i] > hasil)
-                    hasil = i;
+                if (jawaban[i] == jawaban.Max())
+                    return i;
+                
             }
-            return hasil;
+            return -1;
         }
     }
 }
