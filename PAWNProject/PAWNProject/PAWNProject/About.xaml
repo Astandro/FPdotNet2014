@@ -37,10 +37,18 @@
             <TextBlock HorizontalAlignment="Left" Margin="22,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="424">
             	<Run Text="PAWN (Psychotest App for Windows Phone)"/>
             	<LineBreak/>
-            	<Run Text="adalah sebuah aplikasi psikotes yang berbasis pada windows phone 8 "/>
+            	<Run Text="Aplikasi Mobile Psychotest ini merupakan sebuah aplikasi yang dapat digunakan sebagai sarana untuk melatih kemampuan dalam mengerjakan soal-soal psikotes yang sering digunakan dalam proses seleksi."/>
             	<LineBreak/>
-            	<Run Text="dst. dst. belum ditambahin"/>
+            	<Run Text="Aplikasi ini dapat memberikan soal-soal latihan psikotes dan tes kepribadian yang akan menampilkan skor akhir dan atau kesimpulan ketika semua soal selesai dikerjakan, serta memberikan tips-tips bagi pengguna dalam menghadapi psikotes yang sesungguhnya."/>
+				<LineBreak/>
+            	<Run Text="Aplikasi ini merupakan aplikasi berbasis Mobile yang akan berjalan pada sistem operasi Windows Phone 8"/>
             </TextBlock>
+			<TextBlock Margin="10,95,-13,505" Style="{StaticResource PhoneTextTitle1Style}">
+            	<Run Text="Contributor"/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+			
             <HyperlinkButton Content="Back to Home" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click"/>
 
         </Grid>
