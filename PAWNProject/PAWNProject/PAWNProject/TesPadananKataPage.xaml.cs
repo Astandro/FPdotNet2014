@@ -82,7 +82,7 @@ namespace PAWNProject
                 benar = Control.HitungBenar(jawabanUser, listSoal);
 
                 //MessageBox.Show("Nilai Anda : "+((double)benar/listSoal.Count)*100+"%");
-                var container = new Container { Skor = Control.HitungSkor(benar,listSoal), JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString() };
+                var container = new Container { Skor = Control.HitungSkor(benar, listSoal), JumlahSoal = listSoal.Count.ToString(), JawabBenar = benar.ToString(), JawabSalah = (listSoal.Count - benar).ToString(), tipeSoal = listSoal.First().Jenis_Soal.ToString() };
                 PhoneApplicationService.Current.State["Message"] = container;
                 PhoneApplicationService.Current.State["Soal"] = listSoal;
                 PhoneApplicationService.Current.State["Jawaban"] = jawabanUser;

@@ -24,9 +24,9 @@ namespace PAWNProject
             msg = (Container)PhoneApplicationService.Current.State["Message"];
             msg.Skor = Math.Round((Double)msg.Skor);
             textBlockSkor.Text = "Skor Anda " + msg.Skor.ToString() + "%";
-            textBlockJumlahSalah.Text += " " + msg.JawabSalah.ToString();
-            textBlockJumlahBenar.Text += " " + msg.JawabBenar.ToString();
-            textBlockJumlahSoal.Text += " " + msg.JumlahSoal.ToString();
+            textBlockJumlahSalah.Text = "Jumlah Salah :" + " " + msg.JawabSalah.ToString();
+            textBlockJumlahBenar.Text = "Jumlah Benar :" + " " + msg.JawabBenar.ToString();
+            textBlockJumlahSoal.Text = "Jumlah Soal :" + " " + msg.JumlahSoal.ToString();
             if ((double)msg.Skor==100)
             {
                 BitmapImage tn = new BitmapImage();
@@ -59,7 +59,7 @@ namespace PAWNProject
 
         private void btnSelesai_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/PsikotesMainPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
         private void btnDetail_Click(object sender, RoutedEventArgs e)
@@ -69,7 +69,13 @@ namespace PAWNProject
 
         private void btnCobaLagi_Click(object sender, RoutedEventArgs e)
         {
-
+            string tipesoal = ((Container)PhoneApplicationService.Current.State["Message"]).tipeSoal;
+            if(tipesoal.Equals("Formil"))
+                NavigationService.Navigate(new Uri("/TesLogikaFormilPage.xaml", UriKind.Relative));
+            else if(tipesoal.Equals("Angka"))
+                NavigationService.Navigate(new Uri("/TesLogikaAngkaPage.xaml", UriKind.Relative));
+            else
+                NavigationService.Navigate(new Uri("/TesPadananKataPage.xaml", UriKind.Relative));
         }
     }
 }

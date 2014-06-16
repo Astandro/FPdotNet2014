@@ -12,5 +12,6 @@ namespace PAWNProject
         public object JumlahSoal { get; set; }
         public object JawabBenar { get; set; }
         public object JawabSalah { get; set; }
+        public string tipeSoal { get; set; }
     }
 }
