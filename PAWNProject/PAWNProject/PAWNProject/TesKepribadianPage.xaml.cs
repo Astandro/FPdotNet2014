@@ -37,10 +37,6 @@ namespace PAWNProject
         {
             jawabanUser.Clear();
             LoadSoal();
-            if (listSoal.Count > 10)
-            {
-                listSoal.RemoveRange(10, listSoal.Count - 10);
-            }
         }
 
         private void btnLanjut_Click(object sender, RoutedEventArgs e)

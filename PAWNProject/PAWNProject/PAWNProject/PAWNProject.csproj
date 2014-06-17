@@ -208,11 +208,14 @@
     <Content Include="Assets\About.jpg" />
     <Content Include="Assets\accPlaceholder.jpg" />
     <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\andra.png" />
+    <Content Include="Assets\andro.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\BG3.png" />
     <Content Include="Assets\correct.png" />
+    <Content Include="Assets\hashfi.png" />
     <Content Include="Assets\Koleris.jpg" />
     <Content Include="Assets\less40.png" />
     <Content Include="Assets\mainPanoramaBG.png" />
@@ -220,6 +223,7 @@
     <Content Include="Assets\Melankolis.jpg" />
     <Content Include="Assets\placeholder.jpg" />
     <Content Include="Assets\Plegmatis.jpg" />
+    <Content Include="Assets\qori.png" />
     <Content Include="Assets\Sanguinis.jpg" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -31,21 +31,67 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Margin="10,-10,-13,610" Style="{StaticResource PhoneTextTitle1Style}" FontSize="60" FontWeight="Bold" Foreground="#FFF19649">
-            	<Run Text="Definisi PAWN"/>
-            	<LineBreak/>
-            	<Run/>
-            </TextBlock>
-			
-            <TextBlock HorizontalAlignment="Left" Margin="11,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="340" Width="424" FontSize="24">
-            	<Run Text="PAWN (Psychotest App for Windows Phone) merupakan aplikasi Mobile yang berjalan pada sistem operasi Windows Phone 8."/>
-                <LineBreak/>
-                <LineBreak/>
-                <Run Text="Aplikasi ini merupakan sebuah aplikasi yang digunakan sebagai sarana untuk melatih kemampuan dalam mengerjakan soal-soal psikotes yang sering digunakan dalam proses seleksi."/>
-                <LineBreak/>
-			</TextBlock>
-        </Grid>
+        <phone:Pivot HorizontalAlignment="Left" Height="741" Margin="10,49,0,0"  VerticalAlignment="Top" Width="460">
+            <phone:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding}" FontSize="50" />
+                    </Grid>
+                </DataTemplate>
+            </phone:Pivot.HeaderTemplate>
+            <phone:PivotItem CacheMode="{x:Null}" Header="Apa itu PAWN?" Height="570" Width="400" VerticalAlignment="Top" Margin="10,24,50,0">
+                <Grid Height="560" Margin="0,0,-296,0">
+                    <TextBlock Margin="10,10,250,10" FontSize="30" TextWrapping="Wrap">
+                        <Run Text="PAWN (Psychotest App for Windows Phone) merupakan aplikasi Mobile yang berjalan pada sistem operasi Windows Phone 8."/>
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run Text="Aplikasi ini merupakan sebuah aplikasi yang digunakan sebagai sarana untuk melatih kemampuan dalam mengerjakan soal-soal psikotes yang sering digunakan dalam proses seleksi."/>
+                        <LineBreak/>
+                    </TextBlock>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem CacheMode="{x:Null}" Header="Fitur PAWN" Height="511" VerticalAlignment="Top" Margin="-64,48,-80,0">
+                <Grid Height="560" Margin="0,0,-296,0">
+                    <TextBlock Margin="73,4.758,420,-8.474" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" TextWrapping="Wrap" FontSize="22">
+                        <TextBlock.RenderTransform>
+                            <CompositeTransform SkewY="0.423" TranslateY="1.493"/>
+                        </TextBlock.RenderTransform>
+                		<Run Text="&gt;3 Jenis Psikotes mencakup  tes logika formil , tes angka dan tes padanan kata"/>
+                		<LineBreak/>
+                		<Run Text=""/>
+                		<LineBreak/>
+                		<Run Text="&gt; Tes kepribadian untuk menentukan sifat dominan yang dimiliki diri"/>
+                		<LineBreak/>
+                		<Run/>
+                		<LineBreak/>
+                		<Run Text="&gt; Tes kepribadian dilengkapi info mengenai sifat dominan"/>
+                		<LineBreak/>
+                		<Run/>
+                		<LineBreak/>
+                		<Run Text="&gt; Tes psikotes dilengkapi detil hasil tes dan indikator kelulusan"/>
+                		<LineBreak/>
+                		<Run/>
+                		<LineBreak/>
+                		<Run Text="&gt; Dilengkapi tips dalam menghadapi tes psikotes dan kepribadian"/>
+                    </TextBlock>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem CacheMode="{x:Null}" Header="Tim Pengembang" Height="661" VerticalAlignment="Top" Margin="12,28,52,0">
+                <Grid Height="560" Margin="0,0,-296,0">
+                    <TextBlock Margin="10,0,241,10"/>
+                    <Image HorizontalAlignment="Left" Height="138" Margin="35,44,0,0" VerticalAlignment="Top" Width="144" Source="/Assets/andro.png"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="35,209,0,0" TextWrapping="Wrap" Text="Astandro Koesriputranto 5111100017" VerticalAlignment="Top" Width="144"/>
+                    <Image HorizontalAlignment="Left" Height="138" Margin="250,44,0,0" VerticalAlignment="Top" Width="144" Source="/Assets/qori.png"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="258,225,0,0" TextWrapping="Wrap" Text="Qori Wahyu K 5111100059" VerticalAlignment="Top" Width="136" Height="64"/>
+                    <Image HorizontalAlignment="Left" Height="138" Margin="35,323,0,0" VerticalAlignment="Top" Width="144" Source="/Assets/andra.png"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="35,488,0,0" TextWrapping="Wrap" Text="M.Bagus Andra 5111100086" VerticalAlignment="Top" Width="144"/>
+                    <Image HorizontalAlignment="Left" Height="138" Margin="250,323,0,0" VerticalAlignment="Top" Width="144" Source="/Assets/hashfi.png"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="250,488,0,0" TextWrapping="Wrap" Text="Hashfi Alfian C. 5111100104" VerticalAlignment="Top" Width="144"/>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+
+
     </Grid>
 
 </phone:PhoneApplicationPage>
