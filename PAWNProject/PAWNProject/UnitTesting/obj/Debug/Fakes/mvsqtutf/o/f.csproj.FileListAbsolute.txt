@@ -1,0 +1,7 @@
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\b\Microsoft.VisualStudio.QualityTools.UnitTestFramework.10.0.0.0.Fakes.xml
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\b\Microsoft.VisualStudio.QualityTools.UnitTestFramework.10.0.0.0.Fakes.dll
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\b\Microsoft.VisualStudio.QualityTools.UnitTestFramework.10.0.0.0.Fakes.pdb
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\b\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\o\f.csprojResolveAssemblyReference.cache
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\o\Microsoft.VisualStudio.QualityTools.UnitTestFramework.10.0.0.0.Fakes.dll
+C:\Users\shiin_000\Source\Repos\FPdotNet2014\PAWNProject\PAWNProject\UnitTesting\obj\Debug\Fakes\mvsqtutf\o\Microsoft.VisualStudio.QualityTools.UnitTestFramework.10.0.0.0.Fakes.pdb
