@@ -205,6 +205,7 @@
     <Content Include="Assets\100.png" />
     <Content Include="Assets\40more.png" />
     <Content Include="Assets\70more.png" />
+    <Content Include="Assets\About.jpg" />
     <Content Include="Assets\accPlaceholder.jpg" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">

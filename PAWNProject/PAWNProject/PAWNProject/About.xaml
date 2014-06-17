@@ -13,40 +13,38 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" >
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/loginBG.png"></ImageBrush>
+            <ImageBrush ImageSource="/Assets/BG3.png">
+
+            </ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Psychotest App" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Tentang PAWN" Style="{StaticResource PhoneTextNormalStyle}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Margin="10,95,-13,505" Style="{StaticResource PhoneTextTitle1Style}">
-            	<Run Text="About"/>
+            <TextBlock Margin="10,-10,-13,610" Style="{StaticResource PhoneTextTitle1Style}" FontSize="60" FontWeight="Bold" Foreground="#FFF19649">
+            	<Run Text="Definisi PAWN"/>
             	<LineBreak/>
             	<Run/>
             </TextBlock>
 			
-            <TextBlock HorizontalAlignment="Left" Margin="22,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="191" Width="424">
-            	<Run Text="PAWN (Psychotest App for Windows Phone)"/>
-            	<LineBreak/>
-            	<Run Text="Aplikasi Mobile Psychotest ini merupakan sebuah aplikasi yang dapat digunakan sebagai sarana untuk melatih kemampuan dalam mengerjakan soal-soal psikotes yang sering digunakan dalam proses seleksi."/>
-				<LineBreak/>
-            	<Run Text="Aplikasi ini dapat memberikan soal-soal latihan psikotes dan tes kepribadian yang akan menampilkan skor akhir dan atau kesimpulan ketika semua soal selesai dikerjakan, serta memberikan tips-tips bagi pengguna dalam menghadapi psikotes yang sesungguhnya."/>
-				<LineBreak/>
-            	<Run Text="Aplikasi ini merupakan aplikasi berbasis Mobile yang akan berjalan pada sistem operasi Windows Phone 8"/>
+            <TextBlock HorizontalAlignment="Left" Margin="11,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="340" Width="424" FontSize="24">
+            	<Run Text="PAWN (Psychotest App for Windows Phone) merupakan aplikasi Mobile yang berjalan pada sistem operasi Windows Phone 8."/>
+                <LineBreak/>
+                <LineBreak/>
+                <Run Text="Aplikasi ini merupakan sebuah aplikasi yang digunakan sebagai sarana untuk melatih kemampuan dalam mengerjakan soal-soal psikotes yang sering digunakan dalam proses seleksi."/>
+                <LineBreak/>
 			</TextBlock>
-			
-            <HyperlinkButton Content="Back to Home" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top" Click="HyperlinkButton_Click"/>
-
         </Grid>
     </Grid>
 
