@@ -70,11 +70,11 @@ namespace PAWNProject
         private void btnCobaLagi_Click(object sender, RoutedEventArgs e)
         {
             string tipesoal = ((Container)PhoneApplicationService.Current.State["Message"]).tipeSoal;
-            if(tipesoal.Equals("Formil"))
+            if(tipesoal.Equals("Formal"))
                 NavigationService.Navigate(new Uri("/TesLogikaFormilPage.xaml", UriKind.Relative));
             else if(tipesoal.Equals("Angka"))
                 NavigationService.Navigate(new Uri("/TesLogikaAngkaPage.xaml", UriKind.Relative));
-            else
+            else if(tipesoal.Equals("Padanan Kata"))
                 NavigationService.Navigate(new Uri("/TesPadananKataPage.xaml", UriKind.Relative));
         }
     }
